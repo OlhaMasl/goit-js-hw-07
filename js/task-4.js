@@ -5,7 +5,6 @@ const onFormSubmit = evt => {
     const formElEmail = formElements.email.value.trim();
     const formElPass = formElements.password.value.trim();
 
-
     if (formElEmail === ""  || formElPass === "") {
         alert("All form fields must be filled in")
     } else {
