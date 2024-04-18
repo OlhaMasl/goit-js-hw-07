@@ -13,7 +13,15 @@ body {
   line-height: 1.5;
 }
 
-/* .gallery {
+.gallery {
+  /* width: 1200px;
   display: flex;
-  gap: 24px 48px;
-} */
+  gap: 24px ;
+  flex-basis: calc((100% - 48px) / 3); */
+  list-style-type: none;
+}
+
+.box-square {
+  display: inline-flex;
+  margin: 10px;
+}
