@@ -25,14 +25,16 @@ for (let i = 1; i <= amount; i += 1) {
 };
 
 function destroyBoxes() {
-  const createdSquare = document.querySelectorAll(".box-square");
-  createdSquare.forEach((element) => element.remove());
+  // const createdSquare = document.querySelectorAll(".box-square");
+  // createdSquare.forEach((element) => element.remove());
+  boxesEl.innerHTML = "";
 };
 
 const onClickCreate = () => {
   const getNumberOfEl = numberOfEl.value;
   if (getNumberOfEl >= 1 && getNumberOfEl <= 100) {
-    return createBoxes(getNumberOfEl);
+    numberOfEl.value = "";
+    createBoxes(getNumberOfEl);
   }
 }; 
 
