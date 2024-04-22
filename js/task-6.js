@@ -10,23 +10,23 @@ const destroyBtn = document.querySelector(".destroy-btn");
 const boxesEl = document.querySelector("#boxes");
 
 function createBoxes(amount) {
-
+  const arrayOfCreateBoxes = [];
   let sideSquare = 30;
-
-for (let i = 1; i <= amount; i += 1) {
-  const createSquare = document.createElement("div");
+  
+  for (let i = 1; i < amount; i++) {
+   const createSquare = document.createElement("div");
   createSquare.style.width = `${sideSquare}px`;
   createSquare.style.height = `${sideSquare}px`;
   createSquare.classList.add("box-square");
   createSquare.style.backgroundColor = getRandomHexColor();
-  sideSquare += 10;
-  boxesEl.append(createSquare);
-  };
+  sideSquare += 10; 
+  arrayOfCreateBoxes.push(createSquare);
+  }
+
+  boxesEl.append(...arrayOfCreateBoxes); 
 };
 
 function destroyBoxes() {
-  // const createdSquare = document.querySelectorAll(".box-square");
-  // createdSquare.forEach((element) => element.remove());
   boxesEl.innerHTML = "";
 };
 
