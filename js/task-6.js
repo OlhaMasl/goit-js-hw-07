@@ -13,7 +13,7 @@ function createBoxes(amount) {
   const arrayOfCreateBoxes = [];
   let sideSquare = 30;
   
-  for (let i = 1; i < amount; i++) {
+  for (let i = 1; i <= amount; i++) {
    const createSquare = document.createElement("div");
   createSquare.style.width = `${sideSquare}px`;
   createSquare.style.height = `${sideSquare}px`;
